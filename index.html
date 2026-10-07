@@ -1,0 +1,15 @@
+{% extends "base.html" %}{% block title %}MachGuard | Predictive Maintenance{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">SMART INDUSTRIAL MONITORING</span>
+    <h1>Protect Your Machines.<br><em>Predict the Future.</em></h1>
+    <p>MachGuard is an intelligent machine health monitoring and predictive maintenance platform designed to detect problems before they become expensive failures.</p>
+    <div class="actions"><a class="btn primary" href="{{ url_for('dashboard') if current_user.is_authenticated else url_for('register') }}">Get Started</a><a class="btn" href="#features">Explore Features</a></div>
+  </div>
+  <div class="hero-card"><div class="cardtop"><b>Machine Health</b><span class="live">● LIVE</span></div><div class="bigscore">87<span>/100</span></div><div class="good">Excellent Health</div><div class="mini"><span>Temperature</span><b>68°C</b></div><div class="bar"><i style="width:68%"></i></div><div class="mini"><span>Vibration</span><b>2.4 mm/s</b></div><div class="bar"><i style="width:42%"></i></div></div>
+</section>
+<section class="stats"><div><b>12+</b><span>Machines Monitored</span></div><div><b>98%</b><span>Detection Accuracy</span></div><div><b>24/7</b><span>Monitoring</span></div><div><b>AI</b><span>Predictive Insights</span></div></section>
+<section id="features" class="section"><span class="eyebrow">CORE FEATURES</span><h2>Everything you need to protect your machines.</h2><div class="features"><article>⚙️<h3>Machine Monitoring</h3><p>Track temperature, vibration, pressure, RPM and machine health in one place.</p></article><article>🤖<h3>AI Prediction</h3><p>Identify risk patterns and predict maintenance needs before failures happen.</p></article><article>🚨<h3>Smart Alerts</h3><p>Receive clear warnings for abnormal machine conditions and high-risk equipment.</p></article><article>📈<h3>Analytics</h3><p>Understand machine performance with live metrics and visual reports.</p></article><article>🔧<h3>Maintenance</h3><p>Keep maintenance activities organized and reduce unexpected downtime.</p></article><article>📄<h3>Reports</h3><p>Turn machine data into useful operational information for your team.</p></article></div></section>
+<section class="cta"><div><span class="eyebrow">MACHGUARD AI</span><h2>Move from reactive maintenance to predictive maintenance.</h2><p>Start monitoring machine health with a single dashboard.</p></div><a class="btn white" href="{{ url_for('register') }}">Create Account →</a></section>
+{% endblock %}
